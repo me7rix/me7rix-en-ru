@@ -1,0 +1,172 @@
+/* COMMON STYLES */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #757575;
+    --white-text: #fff;
+    --main-color: #00EEFF;
+    --shadow: 0 0 1rem var(--main-color);
+    --transition: .5s ease;
+}
+@font-face {
+    font-family: 'ProstoOne';
+    src: url(../fonts/ProstoOne-Regular.ttf);
+}
+html {
+    font-size: 65.2%;
+}
+body {
+    font-family: 'ProstoOne';
+    background: var(--bg-color);
+}
+span {
+    color: var(--main-color);
+}
+/* TABS */
+.body {
+    flex-direction: column;
+}
+.tabs-heading {
+    color: var(--white-text);
+    text-align: center;
+}
+.body-AP {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    color: #212529;
+    background-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.tab-container {
+    width: 100%;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+.tab {
+    display: flex;
+    flex-direction: column;
+}
+.tab-nav > input[type="radio"] {
+    display: none;
+}
+.tab-content {
+    display: none;
+    color: var(--white-text);
+    animation: opacityTab .6s ease-out;
+}
+@keyframes opacityTab {
+    0% {
+        opacity: 0;
+        margin-top: 400px;
+
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+
+    }
+}
+#content-1:has(~ .tab-nav > #tab-btn-1:checked),
+#content-2:has(~ .tab-nav > #tab-btn-2:checked),
+#content-3:has(~ .tab-nav > #tab-btn-3:checked) {
+    display: block;
+}
+.tab-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    order: -1;
+    justify-content: center;
+}
+.tab-nav > label {
+    display: block;
+    color: var(--main-color);
+    text-decoration: none;
+    background: none;
+    border: .1rem solid var(--main-color);
+    margin-bottom: -1px;
+    border-top-left-radius: .8rem;
+    border-top-right-radius: .8rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    font-weight: 600;
+    text-align: center;
+}
+.tab-nav > input[type="radio"]:checked + label {
+    color: #000;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    cursor: default;
+    transition: .3s linear;
+    position: relative;
+    margin-top: -3px;
+}
+
+table {
+    width: 100%;
+    margin-top: 1rem;
+}
+table tr {
+    width: 100%;
+}
+table td {
+    border: .1rem solid var(--second-bg-color);
+}
+table th {
+    text-align: center;
+    background: var(--second-bg-color);
+    color: var(--main-color);
+}
+
+.btn {
+    display: inline-flex;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: var(--shadow);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    transition: var(--transition);
+    width: 40%;
+    justify-content: center;
+}
+.btn:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.add {
+    margin-top: 10px;
+    padding-top: 0;
+}
+.add form {
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.add form .input {
+    width: 100%;
+    color: var(--white-text);
+    background: var(--second-bg-color);
+    opacity: .8;
+}
+.add form input:focus {
+    border: .1rem solid var(--main-color);
+}
+.add form div {
+    text-align: center;
+}

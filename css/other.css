@@ -1,0 +1,148 @@
+/* COMMON STYLES */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #757575;
+    --white: #fff;
+    --blue: #0ef;
+    --shadow: 0 0 1rem var(--blue);
+    --transition: .5s ease;
+}
+a {
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'ProstoOne';
+    src: url(../fonts/ProstoOne-Regular.ttf);
+}
+html {
+    font-size: 65.2%;
+}
+body {
+    font-family: 'ProstoOne';
+    background: var(--bg-color);
+    color: var(--white);
+}
+span {
+    color: var(--blue);
+}
+section {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+.btn {
+    display: inline-flex;
+    padding: 1rem 2.8rem;
+    background: var(--blue);
+    border-radius: 4rem;
+    box-shadow: var(--shadow);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    transition: var(--transition);
+}
+.btn:hover {
+    box-shadow: none;
+}
+h2 {
+    text-align: center;
+    margin: -4rem 0 4rem 0;
+}
+
+/* BUTTON BACK */
+.back a i {
+    margin: 4rem 0 0 5rem;
+    font-size: 3.5rem;
+    color: var(--white);
+}
+.back a i:hover {
+    color: var(--blue);
+    animation: arrowMove 1s ease-in-out infinite;
+}
+@keyframes arrowMove {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-1.4rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* OTHER PAGES */
+.skill {
+    min-height: 100vh;
+}
+.skill-container, .project-container, .application-container {
+    margin: 5rem 10rem;
+}
+.skill-text {
+    font-size: 1.6rem;
+}
+.skill-text p {
+    margin: 1.5rem 0;
+    line-height: 1.4;
+}
+.skill-list {
+    display: flex;
+    justify-content: space-between;
+}
+.p-list {
+    margin: 2rem 0;
+}
+.p-list p {
+    margin: 1.5rem 0;
+    line-height: 1.4;
+    font-size: 1.6rem;
+}
+.p-list p i {
+    color: var(--blue);
+    font-size: 2rem;
+    margin-right: .6rem;
+}
+.skill-img img {
+    width: 45rem;
+    border-radius: 1.5rem;
+    pointer-events: none;
+}
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.project-container .projects-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.application-container {
+    display: flex;
+    justify-content: space-between;
+}
+.application-video video {
+    border-radius: 1.5rem;
+}
+.application-content {
+    margin: 2rem 0;
+}
+.application-content p {
+    margin: 1.5rem 0;
+    line-height: 1.4;
+    font-size: 1.6rem;
+}
